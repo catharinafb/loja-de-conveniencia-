@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char np[20];
+    int qnt;
+    float pu;
+    float vt ;  
+    float vtd;
+    int cont;
+        
+    
+    printf("digite nome do produto: ");
+    scanf("%s", np);
+    printf("quantidade: ");
+    scanf("%d", &qnt);
+    printf("preco: ");
+    scanf("%f", &pu);
+    vt = pu * qnt;
+    printf("preco total %s is %.2f\n", np, vt);
+    
+    while (1)
+    {
+        printf("quer continuar a compra? clique 1 caso sim  \nou qualquer outro numero pra concluir: ");
+        scanf("%d", &cont);
+    if (cont == 1)
+        {
+            printf("digite o nome do produto: ");
+            scanf("%s", np);
+            printf("quantidade: ");
+            scanf("%d", &qnt);
+            printf("preco: ");
+            scanf("%f", &pu);
+            vt = vt + (pu * qnt); 
+            printf("preco total: %s is %.2f\n", np, pu * qnt);
+        }
+        else
+        {
+            vtd = vt;
+            printf("preco final : %.2f\n", vtd);
+            break;
+        }
+    }
+    return 0;
+}
